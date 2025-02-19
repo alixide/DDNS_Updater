@@ -5,6 +5,7 @@ To initialize the DDNSU WebService a data.json file shall be created with the fo
 
 ```json
 {
+  // list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: <user>, <pass>, <domain>, <ip>.
   "ddnss": [
     {
       "name": "DDNS1",
