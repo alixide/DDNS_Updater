@@ -1,11 +1,15 @@
 # DDNSU WebService
-This document described the key parts of the DDNSU WebService.
+This document described the key parts of the DDNSU WebService. To better follow the json structure here are some keywords:
+Definitions:
+ - Dynamic Domain: A domain name that is updated with a new IP address when the IP address changes.
+ - Dynamic Domain Name Service (DDNS): A service that provides dynamic domain names.
+ - DDNSs: A list of dynamic domain name service providers.
+ - Host Group: A group of dynamic domains that share the same IP address.
 
 To initialize the DDNSU WebService a data.json file shall be created with the following path "./data/data.json". Remember to update the values and remove the comments before using this template.
 
 ```json
 {
-  // list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: <user>, <pass>, <domain>, <ip>.
   "ddnss": [
     {
       "name": "DDNS1",
@@ -65,3 +69,18 @@ To initialize the DDNSU WebService a data.json file shall be created with the fo
     }
   }
 }
+
+Following section described the key components of the data.json file:
+ - ddnss: list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: <user>, <pass>, <domain>, <ip>. Each ddns entry in the list conains the following info:
+   - name: The name of the DDNS service provider.
+   - updateUrl: The URL to update the IP address of the domain.
+   - settings: Custom settings for the GET call.
+ - dynamicHosts: list of host groups, each host group is a variable with a lowercase GUID without dash and contains the following info:
+   - name: The name of the host group.
+   - lastIp: The last IP address that was updated. Leave this null.
+   - domains: list of domains that belong to the host group, each domain is a variable with the name of the domain as key and contains the following info:
+     - ddns: The index of the DDNS service provider in the ddnss list.
+     - updateUrl: The URL to update the IP address of the domain.
+     - authorization: The user and password to authenticate the update call. The authorization include the following fields:
+       - user: The username to authenticate the update call.
+       - pass: The password to authenticate the update call.
