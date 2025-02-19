@@ -1,13 +1,13 @@
 {
-  "name": "ddnsu_web-service",
-  "version": "0.0.0",
+  "name": "ddnsu_webservice",
+  "description": "Free and open source self-hosted dynamic IP updater.",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
   },
-  "description": "DDNSU_WebService",
   "author": {
-    "name": ""
+    "name": "Alixide"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
