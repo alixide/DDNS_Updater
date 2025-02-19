@@ -71,7 +71,7 @@ To initialize the DDNSU WebService a data.json file shall be created with the fo
 }
 ```
 
-Following section described the key components of the data.json file:
+The data.json file shall include the following components:
  - ddnss: list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: <user>, <pass>, <domain>, <ip>. Each ddns entry in the list conains the following info:
    - name: The name of the DDNS service provider.
    - updateUrl: The URL to update the IP address of the domain.
@@ -81,7 +81,7 @@ Following section described the key components of the data.json file:
    - lastIp: The last IP address that was updated. Leave this null.
    - domains: list of domains that belong to the host group, each domain is a variable with the name of the domain as key and contains the following info:
      - ddns: The index of the DDNS service provider in the ddnss list.
-     - updateUrl: The URL to update the IP address of the domain.
+     - updateUrl: The URL to update the IP address of the domain, used if there is a custom update URL for the domain otherwise leave it null.
      - authorization: The user and password to authenticate the update call. The authorization include the following fields:
        - user: The username to authenticate the update call.
        - pass: The password to authenticate the update call.
