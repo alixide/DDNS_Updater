@@ -1,9 +1,3 @@
-# DDNSU WebService
-This document described the key parts of the DDNSU WebService.
-
-To initialize the DDNSU WebService a data.json file shall be created with the following path "./data/data.json". Remember to update the values and remove the comments before using this template.
-
-```json
 {
   "ddnss": [
     {
