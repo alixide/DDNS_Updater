@@ -72,7 +72,7 @@ To initialize the DDNSU WebService a data.json file shall be created with the fo
 ```
 
 The data.json file shall include the following components:
- - ddnss: list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: <user>, <pass>, <domain>, <ip>. Each ddns entry in the list conains the following info:
+ - ddnss: list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: `<user>`, `<pass>`, `<domain>`, and `<ip>`. Each ddns entry in the list conains the following info:
    - name: The name of the DDNS service provider.
    - updateUrl: The URL to update the IP address of the domain.
    - settings: Custom settings for the GET call.
