@@ -1,0 +1,94 @@
+{
+  "ddnss": [
+    {
+      "name": "ddns1",
+      "updateUrl": "http://www.ddns-1.com/update?...",
+      "settings": null
+    },
+    {
+      "name": "ddns2",
+      "updateUrl": "http://www.ddns-2.com/update?...",
+      "settings": null
+    }
+  ],
+  "hosts": {
+    "e31d41bedbe94f74abf56e0c558f25d3": {
+      "name": "host1",
+      "lastIp": null,
+      "lastUpdate": 0,
+      "domains": {
+        "domain-1.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        },
+        "domain-2.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        },
+        "example.com": {
+          "ddns": "0",
+          "updateUrl": "http://optional.com/update",
+          "authorization": {
+            "user": "optionaluser",
+            "pass": "optionalpass"
+          }
+        },
+        "example2.com": {
+          "ddns": "0",
+          "updateUrl": "http://optional.com/update",
+          "authorization": {
+            "user": "optionaluser",
+            "pass": "optionalpass"
+          }
+        },
+        "example4.com": {
+          "ddns": "0",
+          "updateUrl": "http://optional.com/update",
+          "authorization": {
+            "user": "optionaluser",
+            "pass": "optionalpass"
+          }
+        },
+        "example5.com": {
+          "ddns": "0",
+          "updateUrl": "http://optional.com/update",
+          "authorization": {
+            "user": "optionaluser",
+            "pass": "optionalpass"
+          }
+        }
+      }
+    },
+    "d94d69713f6142e287a9d392e15258c1": {
+      "name": "host2",
+      "lastIp": null,
+      "lastUpdate": 0,
+      "domains": {
+        "domain-3.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        },
+        "domain-4.com": {
+          "ddns": 1,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        }
+      }
+    }
+  }
+}

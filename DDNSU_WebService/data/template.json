@@ -1,23 +1,24 @@
 {
   "ddnss": [
     {
-      "name": "DDNS1",
+      "name": "ddns1",
       "updateUrl": "http://www.ddns-1.com/update?...",
       "settings": null
     },
     {
-      "name": "DDNS2",
+      "name": "ddns2",
       "updateUrl": "http://www.ddns-2.com/update?...",
       "settings": null
     }
   ],
-  "dynamicHosts": {
+  "hosts": {
     "e31d41bedbe94f74abf56e0c558f25d3": {
-      "name": "HostGroup1",
+      "name": "host1",
       "lastIp": null,
+	  "lastUpdate": 0,
       "domains": {
         "domain-1.com": {
-          "ddns": 1,
+          "ddns": 0,
           "updateUrl": null,
           "authorization": {
             "user": "username",
@@ -25,7 +26,7 @@
           }
         },
         "domain-2.com": {
-          "ddns": 1,
+          "ddns": 0,
           "updateUrl": null,
           "authorization": {
             "user": "username",
@@ -35,11 +36,12 @@
       }
     },
     "d94d69713f6142e287a9d392e15258c1": {
-      "name": "HostGroup2",
+      "name": "host2",
       "lastIp": null,
+	  "lastUpdate": 0,
       "domains": {
         "domain-3.com": {
-          "ddns": 1,
+          "ddns": 0,
           "updateUrl": null,
           "authorization": {
             "user": "username",
@@ -47,7 +49,7 @@
           }
         },
         "domain-4.com": {
-          "ddns": 2,
+          "ddns": 1,
           "updateUrl": null,
           "authorization": {
             "user": "username",

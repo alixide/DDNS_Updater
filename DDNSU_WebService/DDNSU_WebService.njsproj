@@ -30,17 +30,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
-    <Content Include="data\data.json">
+    <Content Include="data\template.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="loadData.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\index.js" />
-    <Content Include="routes\update.js" />
+    <Content Include="routes\api.js" />
     <Content Include="package.json" />
     <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
+    <Content Include="secret.dat">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\index.pug" />
     <Content Include="views\layout.pug" />
     <Content Include="views\error.pug" />
