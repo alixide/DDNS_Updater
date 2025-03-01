@@ -30,23 +30,112 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="app.js" />
-    <Content Include="data\template.json">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="data\config.json" />
+    <Content Include="data\config-sample.json" />
     <Content Include="loadData.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="routes\index.js" />
+    <Content Include="public\images\Add-Black.png" />
+    <Content Include="public\images\Add-White.png" />
+    <Content Include="public\images\Cancel-Black.png" />
+    <Content Include="public\images\Cancel-White.png" />
+    <Content Include="public\images\Copy-Black.png" />
+    <Content Include="public\images\Copy-White.png" />
+    <Content Include="public\images\DDNSs-Black.png" />
+    <Content Include="public\images\DDNSs-White.png" />
+    <Content Include="public\images\Edit-Black.png" />
+    <Content Include="public\images\Edit-White.png" />
+    <Content Include="public\images\Hidden-Black.png" />
+    <Content Include="public\images\Hidden-White.png" />
+    <Content Include="public\images\Host-Black.png" />
+    <Content Include="public\images\Host-White.png" />
+    <Content Include="public\images\Hosts-Black.png" />
+    <Content Include="public\images\Hosts-White.png" />
+    <Content Include="public\images\Logo-Black.png" />
+    <Content Include="public\images\Logo-White.png" />
+    <Content Include="public\images\Logout-Black.png" />
+    <Content Include="public\images\Logout-White.png" />
+    <Content Include="public\images\OK-Black.png" />
+    <Content Include="public\images\OK-White.png" />
+    <Content Include="public\images\Remove-Black.png" />
+    <Content Include="public\images\Remove-White.png" />
+    <Content Include="public\images\Setting-Black.png" />
+    <Content Include="public\images\Setting-White.png" />
+    <Content Include="public\images\Show-Black.png" />
+    <Content Include="public\images\Show-White.png" />
+    <Content Include="public\images\Sort-Black.png" />
+    <Content Include="public\images\Sort-White.png" />
+    <Content Include="public\javascripts\ddnss.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\host.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\hosts.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\index.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\item-ddns.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\item-domain.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\item-host.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\library.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\main.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\settings.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\index.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\main.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\views.js" />
     <Content Include="routes\api.js" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\main.css" />
     <Content Include="README.md" />
     <Content Include="secret.dat">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="secret-default.dat" />
+    <Content Include="views\components.pug" />
+    <Content Include="views\ddnss.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\host.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\hosts.pug">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\index.pug" />
-    <Content Include="views\layout.pug" />
+    <Content Include="views\item-ddns.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\item-domain.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\item-host.pug">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\layout.pug">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\error.pug" />
+    <Content Include="views\settings.pug">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />

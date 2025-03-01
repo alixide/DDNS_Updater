@@ -1,7 +1,139 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/main.css')
+    script(src="/javascripts/library.js" defer)
+    script(src="/javascripts/main.js" defer)
+    title= title
   body
-    block content
+    .frame.layout-c7f185e83237
+      .frame.board-c7f185e83238
+        //- text: Dynamic DNS Updater
+        .shape.text.dynamic-dn-c7f185e8323a
+          #html-text-node-d0c612f4-5d83-80b2-8005-c7f185e8323a.text-node-html(data-x="1829", data-y="201.00000000000006")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:36px;text-rendering:geometricPrecision;caret-color:rgba(255, 255, 255, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#ffffff&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:-1px;font-family:'Source Sans 3';font-style:normal;font-weight:400")
+                    | Dynamic DNS Updater
+      .frame.board-c7f185e83239
+        //- frame: Board
+        .frame.board-c7f185e8323d
+          //- rect: DDNSU Logo
+          .shape.rect.ddnsu-logo-c7f185e8324f
+        //- frame: Board
+        .frame.board-c7f185e8323c
+          //- frame: DDNSs
+          if (focusedSection === "DDNSs")
+            .frame.board-c7f185e83248(style="background-color: #005fb4;", onclick="window.location.href='/ddnss?session=" + session + "'")
+              .shape.rect.ddnss-whit-c7f1cb543536
+              .shape.text.ddnss-c7f185e8324d
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e8324d(data-x="1596", data-y="292")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | DDNSs
+          else
+            .frame.board-c7f185e83248(onclick="window.location.href='/ddnss?session=" + session + "'")
+              .shape.rect.ddnss-blac-c7f1cb543536
+              .shape.text.ddnss-c7f185e8324d
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e8324d(data-x="1596", data-y="292")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | DDNSs
+          //- frame: Hosts
+          if (focusedSection === "Hosts")
+            .frame.board-c7f185e83247(style="background-color: #005fb4;", onclick="window.location.href='/hosts?session=" + session + "'")
+              .shape.rect.hosts-whit-c7f185e8324c
+              .shape.text.hosts-c7f185e8324b
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e8324b(data-x="1596", data-y="338.99999999999994")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | Hosts
+          else
+            .frame.board-c7f185e83247(onclick="window.location.href='/hosts?session=" + session + "'")
+              .shape.rect.hosts-blac-c7f185e8324c
+              .shape.text.hosts-c7f185e8324b
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e8324b(data-x="1596", data-y="338.99999999999994")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | Hosts
+          //- frame(s): Host
+          each host in data.hosts
+            if (focusedSection === "Host: " + host.name)
+              .frame.board-c7f185e83246(style="background-color: #005fb4;", onclick="window.location.href='/host/" + host.name + "?session=" + session + "'")
+                .shape.rect.host-white-c7f185e8324a
+                .shape.text.host1-c7f185e83249
+                  .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e83249(data-x="1636", data-y="387.49999999999994")
+                    .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                      .paragraph-set.root-0-paragraph-set-0
+                        p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                          span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                            | #{host.name}
+            else
+              .frame.board-c7f185e83246(onclick="window.location.href='/host/" + host.name + "?session=" + session + "'")
+                .shape.rect.host-black-c7f185e8324a
+                .shape.text.host1-c7f185e83249
+                  .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e83249(data-x="1636", data-y="387.49999999999994")
+                    .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                      .paragraph-set.root-0-paragraph-set-0
+                        p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                          span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                            | #{host.name}
+        //- frame: Board
+        .frame.board-c7f185e8323b
+          //- frame: Logout
+          .frame.board-c7f185e83240(onclick="onClickLogout()")
+            .shape.rect.logout-bla-c7f185e83245
+            .shape.text.logout-c7f185e83244
+              .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e83244(data-x="1596.0000000000002", data-y="926.9999999999998")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                        | Logout
+          //- frame: Settings
+          if (focusedSection === "Settings")
+            .frame.board-c7f185e8323f(style="background-color: #005fb4;", onclick="window.location.href='/settings?session=" + session + "'")
+              .shape.rect.setting-wh-c7f185e83243
+              .shape.text.settings-c7f185e83242
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e83242(data-x="1596.0000000000002", data-y="879.9999999999997")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | Settings
+          else
+            .frame.board-c7f185e8323f(onclick="window.location.href='/settings?session=" + session + "'")
+              .shape.rect.setting-bl-c7f185e83243
+              .shape.text.settings-c7f185e83242
+                .text-node-html#html-text-node-d0c612f4-5d83-80b2-8005-c7f185e83242(data-x="1596.0000000000002", data-y="879.9999999999997")
+                  .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml")
+                    .paragraph-set.root-0-paragraph-set-0
+                      p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:22px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")
+                          | Settings
+          //- frame: Seperator
+          .frame.board-c7f185e8323e
+            .shape.path.path-c7f185e83241
+              svg#screenshot-d0c612f4-5d83-80b2-8005-c7f185e83241(width="221", height="6.01", xmlns="http://www.w3.org/2000/svg", viewBox="1548.5 843.495 221 6.01", style="-webkit-print-color-adjust::exact", xmlns:xlink="http://www.w3.org/1999/xlink", fill="none", version="1.1")
+                g#shape-d0c612f4-5d83-80b2-8005-c7f185e83241
+                  defs
+                  g.fills#fills-d0c612f4-5d83-80b2-8005-c7f185e83241
+                    path(d="M1551.500,846.495L1766.500,846.495")
+                  g#strokes-d0c612f4-5d83-80b2-8005-c7f185e83241.strokes
+                    g.stroke-shape
+                      defs
+                      path(d="M1551.500,846.495L1766.500,846.495", style="fill:none;fill-opacity:none;stroke-width:1;stroke:#767676;stroke-opacity:1")
+      block content

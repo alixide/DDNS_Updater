@@ -10,6 +10,8 @@ To initialize the DDNSU WebService a config.json file shall be created with the 
 
 ```json
 {
+  "localUrl": "http://localhost:8080",
+  "publicUrl": "http://example.com",
   "ddnss": [
     {
       "name": "ddns1",
@@ -74,6 +76,8 @@ To initialize the DDNSU WebService a config.json file shall be created with the 
 ```
 
 The config.json file shall include the following components:
+ - localUrl: The local URL of the DDNSU WebService.
+ - publicUrl: The public URL of the DDNSU WebService.
  - ddnss: list of dynamic domain name service providers, custom settings for GET call and also their update url template including the following placeholders: `<user>`, `<pass>`, `<domain>`, and `<ip>`. Each ddns entry in the list conains the following info:
    - name: The name of the DDNS service provider.
    - updateUrl: The URL to update the IP address of the domain.

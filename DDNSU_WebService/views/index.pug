@@ -1,5 +1,67 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap", rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/index.css')
+    script(src="/javascripts/library.js" defer)
+    script(src="/javascripts/index.js" defer)
+    title= title
+  body
+    .frame.board-c9969fb1d93e
+      .frame.board-c9a1e3793d3d
+        .shape.text.ddnsu-pass-c99a84797546
+          .text-node-html#html-text-node-84188423-dd9b-801a-8005-c99a84797546(data-x="614", data-y="693")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#4a4a4a;font-size:14px;font-family:Source Sans 3;font-weight:400") DDNSU Password
+        .frame.board-c9a1d3ba825f
+          .frame.board-c9a0fa5f3a5a
+            .shape.text.official-w-c9a0ad4272b0
+              .text-node-html#html-text-node-84188423-dd9b-801a-8005-c9a0ad4272b0(data-x="818.5", data-y="786")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      a(href="https://github.com/alixide/DDNS_Updater" target="_blank")
+                        span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#005fb4;font-size:14px;font-family:'Source Sans 3';font-weight:400") Official Website
+          .frame.board-c99edcddc07d(onclick="onLoginClick()")
+            .shape.text.log-in-c99d49223bcf
+              .text-node-html#html-text-node-84188423-dd9b-801a-8005-c99d49223bcf(data-x="836", data-y="739")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#ffffff;font-size:22px;font-family:'Source Sans 3';font-weight:400") Login
+          .frame.board-c99cd62b3246
+            input#passwordInput.frame.board-c99bc7a545cf(type="password" placeholder="Enter password" style="color:#000000;font-size:18px;font-family:'Source Sans 3';font-weight:400;padding-left:10px" onkeydown="if(event.key === 'Enter') onEnterPress()")
+        .frame.board-c9990cb831f5
+          .shape.text.free-and-o-c997db1f7ef7
+            .text-node-html#html-text-node-84188423-dd9b-801a-8005-c997db1f7ef7(data-x="657.5", data-y="588")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255,255,255,0.72);font-size:18px;font-family:'Source Sans 3';font-weight:400") Free and Open Source Self-Hosted Dynamic IP Updater.
+          .frame.board-c9a3654011e2
+            .shape.text.welcome-to-c9a343ee4892
+              .text-node-html#html-text-node-84188423-dd9b-801a-8005-c9a343ee4892(data-x="665", data-y="555")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#ffffff;font-size:18px;font-family:'Source Sans 3';font-weight:400") Welcome to
+            .shape.text.dynamic-dn-c99758a9e54f
+              .text-node-html#html-text-node-84188423-dd9b-801a-8005-c99758a9e54f(data-x="759", data-y="544")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#ffffff;font-size:36px;font-family:'Source Sans 3';font-weight:400") Dynamic DNS Updater
+          .frame.board-c99885057b33
+            .shape.text.version-0-c9979aa14d36
+              .text-node-html#html-text-node-84188423-dd9b-801a-8005-c9979aa14d36(data-x="1016", data-y="526.9999999999998")
+                .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                  .paragraph-set.root-0-paragraph-set-0
+                    p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:#ffffff;font-size:14px;font-family:'Source Sans 3';font-weight:400") Version: 0.1.0
+          .frame.board-c99700093588
+            .shape.rect.logo-white-c996e489d605

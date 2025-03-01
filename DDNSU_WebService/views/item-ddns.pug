@@ -1,0 +1,174 @@
+extends layout
+
+block content
+  script(src="/javascripts/item-ddns.js" defer)
+  //- Header Section
+  .frame.board-cbce6ab7a5dc
+    .frame.board-cbce6ab7a5dd
+      .frame.board-cbce6ab7a5df
+        //- Back Button
+        .frame.board-cbce6ab7a5e1(onclick="window.location.href='/ddnss?session=" + session + "'")
+          //- Icon
+          .shape.rect.ddnss-whit-cc308ee33cef
+          //- Left Arrow
+          .shape.text.cc3114c068bc
+            .text-node-html#html-text-node-fc947488-87cc-8027-8005-cc3114c068bc(data-x="1861" data-y="1097")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:30px;text-rendering:geometricPrecision;caret-color:rgba(255, 255, 255, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#ffffff&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") &lt;
+          //- Text "Back"
+          .shape.text.back-cbce6ab7a5e4
+            .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbce6ab7a5e4(data-x="1893" data-y="1104")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(255, 255, 255, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(255, 255, 255, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#ffffff&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Back
+        //- text: Section Title
+        .frame.board-cbce6ab7a5e0
+          .shape.text.section-ti-cbce6ab7a5e2
+            .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbce6ab7a5e2(data-x="1970.0000000000002" data-y="1104")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    if (action == "add")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u18443830-02c3-8035-8005-c6dda394af38&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u0e2055cb-c016-8147-8005-bd87c13a160c&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Add DDNS
+                    else
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u18443830-02c3-8035-8005-c6dda394af38&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u0e2055cb-c016-8147-8005-bd87c13a160c&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Edit DDNS
+    //- Seperator Line
+    .shape.path.path-cbce6ab7a5de
+  //- Footer Section
+  .frame.board-cbce1a3d912a
+    //- Seperator Line
+    .shape.path.path-cbcb3f28f2ef
+    .frame.board-cadccd608d72
+      .frame.board-cae0dacf86bb
+        //- OK Button (Action Button)
+        .frame.board-cae0dacf86bf(onclick="onClickProcessDDNS('" + action + "', '" + ddnsName + "')")
+          .shape.rect.okblack-cae0dacf86c7
+          .shape.text.ok-cae0dacf86c6
+            .text-node-html#html-text-node-fc947488-87cc-8027-8005-cae0dacf86c6(data-x="2529" data-y="1751.01")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    if (action == "add")
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u18443830-02c3-8035-8005-c6dda394af38&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u0e2055cb-c016-8147-8005-bd87c13a160c&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Add DDNS
+                    else
+                      span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u18443830-02c3-8035-8005-c6dda394af38&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u0e2055cb-c016-8147-8005-bd87c13a160c&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Update DDNS
+        //- Discard Button
+        .frame.board-cae0dacf86be(onclick="window.location.href='/ddnss?session=" + session + "'")
+          .shape.rect.cancel-bla-cae0dacf86c5
+          .shape.text.discard-cae0dacf86c4
+            .text-node-html#html-text-node-fc947488-87cc-8027-8005-cae0dacf86c4(data-x="2681.9999999999995" data-y="1751.0099999999995")
+              .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+                .paragraph-set.root-0-paragraph-set-0
+                  p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                    span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u18443830-02c3-8035-8005-c6dda394af38&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u0e2055cb-c016-8147-8005-bd87c13a160c&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Discard
+  //- Content Section
+  .scrollable-content
+    .frame.board-cadccd608d71
+      //- Padding Rectangle
+      .shape.rect.rectangle-cc37ae56ad8f
+      //- Description Area
+      .frame.descriptio-cbc418960a09
+        .shape.text.here-goes-cbc3eeeed51f
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbc3eeeed51f(data-x="1815" data-y="1260")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Provide the information for your DDNS in this section.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Refer to the DDNS provider's website to find the correct update URL.
+      //- Section Title
+      .frame.section-boa-cc2d2b6d6cbf
+        .shape.text.section-ti-cc2d11de413e
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cc2d11de413e(data-x="1815" data-y="1334.01")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:unset;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") DDNS Information
+      //- Read-Write Key Pair (DDNS Name)
+      .frame.key-write-bo-cae65c69f393
+        .shape.text.key-cae65c69f395
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cae65c69f395(data-x="1815" data-y="1426.51")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") DDNS Name:
+        input#ddnsNameInput.frame.board-cbc68e05ad44(type="text" value=ddnsName placeholder="Enter DDNS Name" style="color:#000000;font-size:18px;font-family:'Source Sans 3';font-weight:400;padding-left:10px")
+      //- Notice Section
+      .frame.notice-boar-cbc8b83da5f1
+        .shape.rect.edit-black-cbc8748da7e4
+        .shape.text.some-note-cbc892a8a3c4
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbc892a8a3c4(data-x="1875" data-y="1188")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") The DDNS name shall be case senstivice and shall follow the following format:
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    - A DDNS name can include upper or lower case characters, numbers, spaces, dashes and underlines.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    - A DDNS name shall start with an upper or lower case character.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    - A DDNS name shall be at least three charcter long.
+      //- Read-Write Key Pair (Update URL)
+      .frame.key-write-bo-cae65c69f393
+        .shape.text.key-cae65c69f395
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cae65c69f395(data-x="1815" data-y="1426.51")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Update URL:
+        input#ddnsUpdateUrlInput.frame.board-cbc68e05ad44(type="text" value=ddnsUpdateUrl placeholder="Enter Update URL" style="color:#000000;font-size:18px;font-family:'Source Sans 3';font-weight:400;padding-left:10px")
+      //- Notice Section
+      .frame.notice-boar-cbc8b83da5f1
+        .shape.rect.edit-black-cbc8748da7e4
+        .shape.text.some-note-cbc892a8a3c4
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbc892a8a3c4(data-x="1875" data-y="1188")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Following variables can be used in the update URL:
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    #{'<'}domain#{'>'}: This will be replaced with the domain name defined under host section.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    #{'<'}ip#{'>'}: This will be replaced with the current IP once the IP changes.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    #{'<'}user#{'>'}: This will be replaced with the username provided under the domain section.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400")    #{'<'}pass#{'>'}: This will be replaced with the password provided under the domain section.
+      //- Seperator Line
+      .frame.seperator-b-cbc5c77ccc07
+        .shape.path.path-cbc56e878737
+      //- Description Area
+      .frame.descriptio-cbc418960a09
+        .shape.text.here-goes-cbc3eeeed51f
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbc3eeeed51f(data-x="1815" data-y="1260")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Some DDNS providers require additional settings when calling their APIs.
+                p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Here you can provide such settings when neccessary.
+      //- Read-Write Key Pair (Settings)
+      .frame.key-write-bo-cae65c69f393
+        .shape.text.key-cae65c69f395
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cae65c69f395(data-x="1815" data-y="1426.51")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:gfont-source-sans-3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Settings:
+        input#ddnsSettingsInput.frame.board-cbc68e05ad44(type="text" value=ddnsSettings placeholder="Enter Settings" style="color:#000000;font-size:18px;font-family:'Source Sans 3';font-weight:400;padding-left:10px")
+      //- Notice Section
+      .frame.notice-boar-cbc8b83da5f1
+        .shape.rect.edit-black-cbc8748da7e4
+        .shape.text.some-note-cbc892a8a3c4
+          .text-node-html#html-text-node-fc947488-87cc-8027-8005-cbc892a8a3c4(data-x="1875" data-y="1188")
+            .root.rich-text.root-0(style="display:flex;white-space:break-spaces;align-items:flex-start")
+              .paragraph-set.root-0-paragraph-set-0
+                p.paragraph.root-0-paragraph-set-0-paragraph-0(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-0-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") The settings are optional and can be left empty when not neccessary.
+                //- p.paragraph.root-0-paragraph-set-0-paragraph-1(dir="ltr")
+                  span.text-node.root-0-paragraph-set-0-paragraph-1-text-0(style="color:rgba(0, 0, 0, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:14px;text-rendering:geometricPrecision;caret-color:rgba(0, 0, 0, 1);text-decoration:none;--font-id:Source Sans 3;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#000000&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Source Sans 3&quot;;font-style:normal;font-weight:400") Add more text when needed.
+      //- Padding Rectangle
+      .shape.rect.rectangle-cc372c8d0a13

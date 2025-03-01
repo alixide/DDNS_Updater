@@ -10,7 +10,7 @@ var router = express.Router();
 /////////////////////////////////////////////////////////////
 // This section is the API for updating a host IP.
 // Updates the IP address of a host.
-// Example url: http://localhost:8080/api/update?host=e31d41bedbe94f74abf56e0c558f25d3.com&ip=1.1.1.1
+// Example url: http://localhost:8080/api/update?host=e31d41bedbe94f74abf56e0c558f25d3&ip=1.1.1.1
 router.get('/update', function (req, res) {
     // Extracting the data from the app.locals
     const data = req.app.locals.data;
@@ -61,7 +61,7 @@ router.get('/update', function (req, res) {
     // Updating the host information
     var host = hosts[urlHostId];
     host.lastIp = urlIp;
-    host.lastUpdate = Date.now().toString(16);
+    host.lastUpdate = Date.now();
 
     // Saving the data
     fs.mkdirSync('./data', { recursive: true });
@@ -192,6 +192,32 @@ router.get('/logout', (req, res) => {
 
     // Sending the response
     res.write("OK \n" + "Session is invalidated.");
+    res.end();
+});
+
+// Check the validity of the session.
+// Example url: http://localhost:8080/api/session?session=1234
+router.get('/session', (req, res) => {
+    // Extracting the lower case url parameters
+    var q = url.parse(req.url.toLowerCase(), true).query;
+    var urlSession = q.session;
+
+    // Nothing to do if session is not provided
+    if (!urlSession) {
+        res.write("Error \n" + "No session provided.");
+        res.end();
+        return;
+    }
+
+    // Informing the outcome if session is not valid
+    if (req.app.locals.session != urlSession) {
+        res.write("Error \n" + "Invalid session.");
+        res.end();
+        return;
+    }
+
+    // Sending the response
+    res.write("OK \n" + "Session is valid.");
     res.end();
 });
 
@@ -480,13 +506,27 @@ router.get('/ddns/:name/delete', (req, res) => {
     // Deleting the DDNS entry
     ddnss.splice(index, 1);
 
+    // Removing all the domains from host with this DDNS and updating the domains with higher index to match the new list
+    var deletedDomains = "";
+    for (const hostId in hosts) {
+        const host = hosts[hostId];
+        for (const domain in host.domains) {
+            if (host.domains[domain].ddns === index) {
+                deletedDomains += (host.name + " => " + domain + "\n");
+                delete host.domains[domain];
+            }
+            else if (host.domains[domain].ddns > index)
+                host.domains[domain].ddns--;
+        }
+    }
+
     // Saving the data
     fs.mkdirSync('./data', { recursive: true });
     fs.writeFileSync('./data/config.json', JSON.stringify(data, null, 2), 'utf-8');
     console.log('JSON data updated successfully:', data);
 
     // Sending the response
-    res.write("OK \n" + req.params.name + " DDNS is deleted.");
+    res.write("OK \n" + req.params.name + " DDNS is deleted. \n" + "The following domain(s) are also deleted:\n" + deletedDomains);
     res.end();
 });
 
@@ -531,14 +571,14 @@ router.get('/host/add', (req, res) => {
     }
 
     // Setting the ip to null if not provided
+    var lastUpdate = 0;
     if (!urlIp)
         urlIp = null;
+    else
+        lastUpdate = Date.now();
 
     // Generating a lower case GUID without dashes as the host id
     const hostId = crypto.randomUUID().replace(/-/g, "").toLowerCase();
-
-    // Getting the current time in milliseconds
-    const lastUpdate = Date.now().toString(16);
 
     // Adding the new dynamic host
     hosts[hostId] = { name: urlName, lastIp: urlIp, lastUpdate: lastUpdate, domains: {} };
@@ -644,6 +684,8 @@ router.get('/host/:hostId/update', (req, res) => {
     // Setting the IP to current IP if not provided
     if (!urlIp)
         urlIp = host.lastIp;
+    else
+        host.lastUpdate = Date.now();
 
     // Updating the host
     host.name = urlName;
@@ -769,6 +811,17 @@ router.get('/host/:hostId/domain/add', (req, res) => {
     // Nothing to do if ddns index is not provided
     if (!urlDdns) {
         res.write("Error \n" + "No ddns index provided.");
+        res.end();
+        return;
+    }
+
+    // Converting the urlDdns to integer if it is not
+    if (typeof urlDdns === 'string')
+        urlDdns = parseInt(urlDdns);
+
+    // Nothing to do if urlDdns is out of ddnss range
+    if (urlDdns < 0 || urlDdns >= ddnss.length) {
+        res.write("Error \n" + "Out of range DDNS index.");
         res.end();
         return;
     }
@@ -1016,6 +1069,64 @@ router.get('/host/:hostId/domain/:domain/delete', (req, res) => {
 
     // Sending the response
     res.write("OK \n" + urlDomain + " domain is deleted from " + host.name + " host.");
+    res.end();
+});
+
+/////////////////////////////////////////////////////////////
+// This section is the API for managing settings.
+// Example url: http://localhost:8080/api/settings/update?session=1234&localUrl=localhost&publicUrl=http://example.com
+router.get('/settings/update', (req, res) => {
+    // Extracting the data from the app.locals
+    const data = req.app.locals.data;
+
+    // Extracting the lower case url parameters
+    var q = url.parse(req.url.toLowerCase(), true).query;
+    var session = q.session;
+
+    // Extracting the case sensitive url parameters
+    var q = url.parse(req.url, true).query;
+    var urlLocalUrl = q.localUrl;
+    var urlPublicUrl = q.publicUrl;
+
+    // Nothing to do if session is not provided
+    if (!session) {
+        res.write("Error \n" + "No session provided.");
+        res.end();
+        return;
+    }
+
+    // Nothing to do if session is not valid
+    if (req.app.locals.session != session) {
+        res.write("Error \n" + "Invalid session.");
+        res.end();
+        return;
+    }
+
+    // Nothing to do if local url is not provided
+    if ((!urlLocalUrl) || urlLocalUrl=="") {
+        res.write("Error \n" + "No local url provided.");
+        res.end();
+        return;
+    }
+
+    // Nothing to do if public url is not provided
+    if ((!urlPublicUrl) || urlPublicUrl == "") {
+        res.write("Error \n" + "No public url provided.");
+        res.end();
+        return;
+    }
+
+    // Updating the settings
+    data.localUrl = urlLocalUrl;
+    data.publicUrl = urlPublicUrl;
+
+    // Saving the data
+    fs.mkdirSync('./data', { recursive: true });
+    fs.writeFileSync('./data/config.json', JSON.stringify(data, null, 2), 'utf-8');
+    console.log('JSON data updated successfully:', data);
+
+    // Sending the response
+    res.write("OK \n" + "Settings are updated.");
     res.end();
 });
 
