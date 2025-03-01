@@ -1,8 +1,5 @@
 # DDNS Updater
-The DDNS Updater project helps you to update your dynamic domain name servers upon IP changes in your network.
-
-# DDNSU WebService
-DDNSU WebService is a dynamic domain name service (DDNS) updater that allows you to manage and update the IP addresses of your dynamic domains. This service is designed to work with multiple DDNS providers and supports user and domain management.
+The DDNS Updater project helps you to update your dynamic domain name servers upon IP changes in your network. The main component of the project is DDNSU WebService. DDNSU WebService is a dynamic domain name service (DDNS) updater that allows you to manage and update the IP addresses of your dynamic domains. This service is designed to work with multiple DDNS providers and supports user and domain management.
 
 ## Table of Contents
 - [Definitions](#definitions)
