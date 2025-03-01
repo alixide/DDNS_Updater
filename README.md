@@ -24,7 +24,70 @@ DDNSU WebService is a dynamic domain name service (DDNS) updater that allows you
 To initialize the DDNSU WebService, create a `config.json` file with the following path `./data/config.json`. Update the values and remove the comments before using this template.
 
 ```json
-{ "localUrl": "http://localhost:8080", "publicUrl": "http://example.com", "ddnss": [ { "name": "ddns1", "updateUrl": "http://www.ddns-1.com/update?...", "settings": null }, { "name": "ddns2", "updateUrl": "http://www.ddns-2.com/update?...", "settings": null } ], "hosts": { "e31d41bedbe94f74abf56e0c558f25d3": { "name": "host1", "lastIp": null, "lastUpdate": 0, "domains": { "domain-1.com": { "ddns": 0, "updateUrl": null, "authorization": { "user": "username", "pass": "password" } }, "domain-2.com": { "ddns": 0, "updateUrl": null, "authorization": { "user": "username", "pass": "password" } } } }, "d94d69713f6142e287a9d392e15258c1": { "name": "host2", "lastIp": null, "lastUpdate": 0, "domains": { "domain-3.com": { "ddns": 0, "updateUrl": null, "authorization": { "user": "username", "pass": "password" } }, "domain-4.com": { "ddns": 1, "updateUrl": null, "authorization": { "user": "username", "pass": "password" } } } } } }
+{
+  "localUrl": "http://localhost:8080",
+  "publicUrl": "http://example.com",
+  "ddnss": [
+    {
+      "name": "ddns1",
+      "updateUrl": "http://www.ddns-1.com/update?...",
+      "settings": null
+    },
+    {
+      "name": "ddns2",
+      "updateUrl": "http://www.ddns-2.com/update?...",
+      "settings": null
+    }
+  ],
+  "hosts": {
+    "e31d41bedbe94f74abf56e0c558f25d3": {
+      "name": "host1",
+      "lastIp": null,
+      "lastUpdate": 0,
+      "domains": {
+        "domain-1.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        },
+        "domain-2.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        }
+      }
+    },
+    "d94d69713f6142e287a9d392e15258c1": {
+      "name": "host2",
+      "lastIp": null,
+      "lastUpdate": 0,
+      "domains": {
+        "domain-3.com": {
+          "ddns": 0,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        },
+        "domain-4.com": {
+          "ddns": 1,
+          "updateUrl": null,
+          "authorization": {
+            "user": "username",
+            "pass": "password"
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 ### Configuration Components
