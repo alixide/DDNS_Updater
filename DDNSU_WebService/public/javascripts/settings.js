@@ -26,7 +26,7 @@ function onClickUpdateSettings() {
     }
 
     // Alerting the user if the public URL is not valid
-    if (!isValidDomainUrl(newPublicUrl)) {
+    if (!isValidUrl(newPublicUrl)) {
         alert("Public URL is not valid!");
         return;
     }

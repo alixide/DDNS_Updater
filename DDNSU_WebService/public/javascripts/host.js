@@ -13,16 +13,11 @@ function onClickUpdateIPs(hostId, hostName, hostIp) {
         return;
 
     // Updating the IP via API
-    fetch("/api/update?host=" + hostId + "&ip=" + hostIp)
+    fetch("/api/update?host=" + hostId + "&ip=" + hostIp + "&force=true")
         .then(response => response.text()) // Process response as plain text
         .then(data => {
-            if (data.startsWith("OK")) {
-                // Informing the user
-                alert("All the domain IPs for '" + hostName + "' is successfully updated.");
-            } else {
-                // Informing the user
-                alert(data.split("\n")[1]);
-            }
+            // Informing the user
+            alert("All the domain IPs for '" + hostName + "' is successfully updated.\n\n" + data);
         })
         .catch(error => console.error("Error fetching API:", error));
 };

@@ -2,7 +2,7 @@
 'use strict';
 const express = require('express');
 const fs = require('fs');
-const http = require('http');
+const https = require('https');
 const url = require('url');
 
 var router = express.Router();
@@ -10,7 +10,7 @@ var router = express.Router();
 /////////////////////////////////////////////////////////////
 // This section is the API for updating a host IP.
 // Updates the IP address of a host.
-// Example url: http://localhost:8080/api/update?host=e31d41bedbe94f74abf56e0c558f25d3&ip=1.1.1.1
+// Example url: http://localhost:8080/api/update?host=e31d41bedbe94f74abf56e0c558f25d3&ip=1.1.1.1&force=true
 router.get('/update', function (req, res) {
     // Extracting the data from the app.locals
     const data = req.app.locals.data;
@@ -21,6 +21,7 @@ router.get('/update', function (req, res) {
     var q = url.parse(req.url.toLowerCase(), true).query;
     var urlHostId = q.host;
     var urlIp = q.ip;
+    var urlForce = q.force;
 
     // nothing to do if host id is not provided
     if (!urlHostId) {
@@ -51,12 +52,19 @@ router.get('/update', function (req, res) {
         else
             urlIp = req.ip;
 
-    // nothing to do if the ip has not changed.
-    if (hosts[urlHostId].lastIp == urlIp || !urlIp || urlIp == "::1") {
-        res.write("Error \n" + "Unchanged or invalid IP.");
-        res.end();
-        return;
-    }
+    // Setting the force value when it is not set
+    if ((!urlForce) || urlForce == "false")
+        urlForce = false;
+    else
+        urlForce = true;
+
+    // nothing to do if the ip has not changed. Only if the force is not true.
+    if (!urlForce)
+        if (hosts[urlHostId].lastIp == urlIp || !urlIp || urlIp == "::1") {
+            res.write("Error \n" + "Unchanged or invalid IP.");
+            res.end();
+            return;
+        }
 
     // Updating the host information
     var host = hosts[urlHostId];
@@ -86,10 +94,10 @@ router.get('/update', function (req, res) {
             updateUrl = updateUrl.replace("<pass>", host.domains[domain].authorization.pass);
         }
 
-        // making a http request
+        // making a https request
         requestCounter++;
         const options = {
-            port: 80,
+            port: 443,
             method: 'GET',
             domain: domain
         };
@@ -100,7 +108,7 @@ router.get('/update', function (req, res) {
             for (const setting of settings)
                 options[setting] = ddnss[host.domains[domain].ddns].settings[setting];
         }
-        var req = http.request(updateUrl, options, response => {
+        var req = https.request(updateUrl, options, response => {
             var data = "";
             response.on('data', (d) => { data += d; });
             response.on('end', () => {
@@ -111,7 +119,7 @@ router.get('/update', function (req, res) {
             });
         });
         req.on('error', error => {
-            res.write("Error \n" + "An error has occurred.");
+            res.write("Error \n" + "An error has occurred.\n" + error.message);
             requestCounter--;
             if (requestCounter == 0)
                 res.end();

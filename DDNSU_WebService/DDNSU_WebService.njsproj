@@ -45,6 +45,7 @@
     <Content Include="public\images\Copy-White.png" />
     <Content Include="public\images\DDNSs-Black.png" />
     <Content Include="public\images\DDNSs-White.png" />
+    <Content Include="public\images\favicon.ico" />
     <Content Include="public\images\Edit-Black.png" />
     <Content Include="public\images\Edit-White.png" />
     <Content Include="public\images\Hidden-Black.png" />

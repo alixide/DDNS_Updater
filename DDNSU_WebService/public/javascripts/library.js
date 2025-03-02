@@ -40,9 +40,16 @@ function isValidUrl(url) {
         return true;
 
     // Regular expression to match the required format allowing "<domain>", "<ip>", "<user>", "<pass>" variables in the fragment locator section
-    const pattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?(\?([\w\-<>]+=[\w\-<>]+)(&[\w\-<>]+=[\w\-<>]+)*)?$/;
+    //const pattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?(\?([\w\-<>]+=[\w\-<>]+)(&[\w\-<>]+=[\w\-<>]+)*)?$/;
+    //return pattern.test(url);
 
-    return pattern.test(url);
+    // Alternetive approach
+    try {
+        new URL(url);
+        return true;
+    } catch (e) {
+        return false;
+    }
 };
 
 // This function checks if a domain URL is valid.
