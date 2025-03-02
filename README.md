@@ -3,6 +3,8 @@ The DDNS Updater project helps you to update your dynamic domain name servers up
 
 ## Table of Contents
 - [Definitions](#definitions)
+- [Screenshots](#screenshots)
+- [Default Password](#default-password)]
 - [Configuration](#configuration)
 - [API Documentation](#api-documentation)
   - [Update IP of a Host](#update-ip-of-a-host)
@@ -16,6 +18,28 @@ The DDNS Updater project helps you to update your dynamic domain name servers up
 - **Dynamic Domain Name Service (DDNS)**: A service that provides dynamic domain names.
 - **DDNSs**: A list of dynamic domain name service providers.
 - **Host**: A host with a dynamic IP which can contain several dynamic domains sharing the same IP address.
+
+## Screenshots
+This section contains the screenshots of the DDNSU WebService.
+### Login Page
+![Login page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/index.png)
+### DDNSs List Page
+![DDNSs List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/ddnss.png)
+### DDNS Item Page
+![DDNS Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-ddns.png)
+### Hosts List Page
+![Hosts List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/hosts.png)
+### Host Item Page
+![Host Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-host.png)
+### Host's Domain List Page
+![Host's Domain List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/host.png)
+### Domain Item Page
+![Domain Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-domain.png)
+### Settings Page
+![Settings page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/settings.png)
+
+## Default Password
+The default password of the DDNSU WebService is `password`.
 
 ## Configuration
 To initialize the DDNSU WebService, create a `config.json` file with the following path `./data/config.json`. Update the values and remove the comments before using this template.

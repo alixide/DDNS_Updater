@@ -6,6 +6,10 @@ Definitions:
  - DDNSs: A list of dynamic domain name service providers.
  - Host: A host with a dynamic IP which can contain several dynamic domains sharing the same IP address.
 
+ ## Default Password
+ The default password of the DDNSU WebService is `password`.
+
+ ## Installation
 To initialize the DDNSU WebService a config.json file shall be created with the following path "./data/config.json". Remember to update the values and remove the comments before using this template.
 
 ```json
@@ -98,7 +102,22 @@ In order to update a host IP the host shall make a call with the following forma
 
 ## Screenshots
 This section contains the screenshots of the DDNSU WebService.
+### Login Page
 ![Login page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/index.png)
+### DDNSs List Page
+![DDNSs List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/ddnss.png)
+### DDNS Item Page
+![DDNS Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-ddns.png)
+### Hosts List Page
+![Hosts List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/hosts.png)
+### Host Item Page
+![Host Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-host.png)
+### Host's Domain List Page
+![Host's Domain List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/host.png)
+### Domain Item Page
+![Domain Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-domain.png)
+### Settings Page
+![Settings page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/settings.png)
 
 ## API Documentation
 This section documents the API endpoints of the DDNSU WebService.
