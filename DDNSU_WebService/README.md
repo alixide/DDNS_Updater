@@ -243,3 +243,95 @@ This endpoint deletes a domain of a host.
   - host: The dynamic host id.
   - domain: The name of the domain.
   - session: The session id of the user.
+  
+## Docker Container
+The DDNSU WebService can be run as a Docker container. The Docker image of the DDNSU WebService is available on Docker Hub.
+### Building Docker Image
+To build the Docker image of the DDNSU WebService run the following command:
+```bash
+docker build -t ddnsu .
+```
+### Publishing Docker Image
+To publish the Docker image of the DDNSU WebService to Docker Hub run the following command:
+```bash
+docker tag ddnsu <username>/ddnsu:v1.0.1
+docker push <username>/ddnsu:v1.0.1
+```
+Also publish the Docker image of the DDNSU WebService to Docker Hub with the latest tag run the following command:
+```bash
+docker tag ddnsu <username>/ddnsu:latest
+docker push <username>/ddnsu:latest
+```
+### Pulling Docker Image
+To pull the Docker image of the DDNSU WebService from Docker Hub run the following command:
+```bash
+docker pull <username>/ddnsu:latest
+```
+### Running Docker Container
+To run the Docker container of the DDNSU WebService run the following command:
+```bash
+docker run -d -p 8080:8080 --name ddnsu ddnsu
+```
+### Stopping Docker Container
+To stop the Docker container of the DDNSU WebService run the following command:
+```bash
+docker stop ddnsu
+```
+### Removing Docker Container
+To remove the Docker container of the DDNSU WebService run the following command:
+```bash
+docker rm ddnsu
+```
+### Removing Docker Image
+To remove the Docker image of the DDNSU WebService run the following command:
+```bash
+docker rmi ddnsu
+```
+### Running Docker Container with Config File
+To run the Docker container of the DDNSU WebService with a config file run the following command:
+```bash
+docker run -d -p 8080:8080 -v /path/to/config.json:/app/data/config.json --name ddnsu ddnsu
+```
+### Running Docker Container with Data Volume
+To run the Docker container of the DDNSU WebService with a data volume run the following command:
+```bash
+docker run -d -p 8080:8080 -v ddnsu-data:/app/data --name ddnsu ddnsu
+```
+### Removing Data Volume
+To remove the data volume of the DDNSU WebService run the following command:
+```bash
+docker volume rm ddnsu-data
+```
+### Defining docker-compose.yml File
+Define the docker-compose.yml file with the following content:
+```yaml
+version: '3.8'
+services:
+  ddnsu:
+    image: alixide/ddnsu:latest 
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+```
+### Running Docker Container with docker-compose.yml File
+To run the Docker container of the DDNSU WebService with a docker-compose.yml file run the following command:
+```bash
+docker-compose up -d
+```
+Alternatively to run the Docker container of the DDNSU WebService with Docker Compose run the following command:
+```bash
+docker-compose -f docker-compose.yml up -d
+```
+### Stopping Docker Container with docker-compose.yml File
+To stop the Docker container of the DDNSU WebService with a docker-compose.yml file run the following command:
+```bash
+docker-compose down
+```
+Alternatively to stop the Docker container of the DDNSU WebService with Docker Compose and remove the volume run the following command:
+```bash
+docker-compose down -v
+```

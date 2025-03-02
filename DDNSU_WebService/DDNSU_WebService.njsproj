@@ -29,12 +29,14 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include=".dockerignore" />
     <Content Include="app.js" />
-    <Content Include="data\config.json" />
-    <Content Include="data\config-sample.json" />
+    <Content Include="config-default.json" />
+    <Content Include="dockerfile" />
     <Content Include="loadData.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="package-lock.json" />
     <Content Include="public\images\Add-Black.png" />
     <Content Include="public\images\Add-White.png" />
     <Content Include="public\images\Cancel-Black.png" />

@@ -16,6 +16,14 @@ module.exports = function () {
     // Initialize the data variable. Check the readme.md file for the data structure.
     var data = null;
 
+    // Checking if the file exists
+    if (!fs.existsSync(filePath)) {
+        // Copying and renaming the config default file to the data folder
+        const defaultConfigPath = path.join(__dirname, '.', 'config-default.json');
+        fs.copyFileSync(defaultConfigPath, filePath);
+        console.log('The default config file was copied to the data folder.');
+    }
+
     // Load the data from a file
     try {
         // Read the JSON file
