@@ -22,20 +22,28 @@ The DDNS Updater project helps you to update your dynamic domain name servers up
 ## Screenshots
 This section contains the screenshots of the DDNSU WebService.
 ### Login Page
+Login to the DDNSU WebService with the default password. The default password is `password`.
 ![Login page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/index.png)
 ### DDNSs List Page
+The DDNSs list page shows the list of DDNS service providers. Here you can add new DDNS service providers, update existing ones, and delete them.
 ![DDNSs List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/ddnss.png)
 ### DDNS Item Page
+This page shows the details of a DDNS service provider. Here you can update the DDNS service provider.
 ![DDNS Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-ddns.png)
 ### Hosts List Page
+The Hosts list page shows the list of host groups. Here you can add new host groups, update existing ones, and delete them.
 ![Hosts List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/hosts.png)
 ### Host Item Page
+This page shows the details of a host group. Here you can update the host group.
 ![Host Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-host.png)
 ### Host's Domain List Page
+The Host's Domain List page shows the list of domains that belong to a host group. Here you can add new domains, update existing ones, and delete them.
 ![Host's Domain List page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/host.png)
 ### Domain Item Page
+This page shows the details of a domain that belongs to a host group. Here you can update the domain.
 ![Domain Item page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/item-domain.png)
 ### Settings Page
+The Settings page shows the settings of the DDNSU WebService. Here you can change the password of the DDNSU WebService.
 ![Settings page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/settings.png)
 
 ## Default Password
