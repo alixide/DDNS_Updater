@@ -96,6 +96,10 @@ The config.json file shall include the following components:
 In order to update a host IP the host shall make a call with the following format providing dynamic host id (dhid) and the ip:
 `http://localhost:8080/api/update?dhid=e31d41bedbe94f74abf56e0c558f25d3&ip=1.1.1.1`
 
+## Screenshots
+This section contains the screenshots of the DDNSU WebService.
+![Login page](https://github.com/alixide/DDNS_Updater/blob/master/DDNSU_WebService/screenshots/index.png)
+
 ## API Documentation
 This section documents the API endpoints of the DDNSU WebService.
 
