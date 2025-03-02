@@ -4,7 +4,7 @@ The DDNS Updater project helps you to update your dynamic domain name servers up
 ## Table of Contents
 - [Definitions](#definitions)
 - [Screenshots](#screenshots)
-- [Default Password](#default-password)]
+- [Default Password](#default-password)
 - [Configuration](#configuration)
 - [API Documentation](#api-documentation)
   - [Update IP of a Host](#update-ip-of-a-host)
