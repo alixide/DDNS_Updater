@@ -107,6 +107,14 @@
     <Content Include="routes\api.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="screenshots\ddnss.png" />
+    <Content Include="screenshots\host.png" />
+    <Content Include="screenshots\hosts.png" />
+    <Content Include="screenshots\index.png" />
+    <Content Include="screenshots\item-ddns.png" />
+    <Content Include="screenshots\item-domain.png" />
+    <Content Include="screenshots\item-host.png" />
+    <Content Include="screenshots\settings.png" />
     <Content Include="secret.dat">
       <SubType>Code</SubType>
     </Content>
@@ -141,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="screenshots\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
